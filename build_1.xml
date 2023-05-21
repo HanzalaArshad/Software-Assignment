@@ -1,0 +1,16 @@
+<project>
+<target name="compile">
+<mkdir dir="build/classes"/>
+<javac srcdir="src/bank.management.system" destdir="build/classes"/>
+</target>
+<target name="jar">
+<jar destfile="build/Main.jar" basedir="build/classes">
+<manifest>
+<attribute name="Main-Class" value="bank.management.system.Login"/>
+</manifest>
+</jar>
+</target>
+<target name="run">
+<java jar="build/Main.jar" fork="true"/>
+</target>
+</project>
